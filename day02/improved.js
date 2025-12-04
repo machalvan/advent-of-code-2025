@@ -1,6 +1,6 @@
-require('../utils')()
+import '../utils.js'
 
-const part1 = input => {
+export const part1 = input => {
   let sum = 0
 
   for (const range of input.split(',')) {
@@ -22,7 +22,7 @@ function isRepeated(str) {
   return (str + str).indexOf(str, 1) !== str.length
 }
 
-const part2 = input => {
+export const part2 = input => {
   let sum = 0
 
   for (const range of input.split(',')) {
@@ -37,5 +37,3 @@ const part2 = input => {
 
   return sum
 }
-
-module.exports = { part1, part2 }
