@@ -22,16 +22,16 @@ async function main() {
 
   try {
     const { part1, part2 } = await import(`./${day}/improved.js`)
-    console.log(part1(input))
-    console.log(part2(input))
+    console.log(await part1(input))
+    console.log(await part2(input))
   } catch (error) {
     if (error.code !== 'ERR_MODULE_NOT_FOUND') {
       throw error
     }
 
     const { part1, part2 } = await import(`./${day}/index.js`)
-    console.log(part1(input))
-    console.log(part2(input))
+    console.log(await part1(input))
+    console.log(await part2(input))
   }
 }
 
