@@ -140,6 +140,10 @@ Array.prototype.rotate = function (times = 1) {
   return rotated.rotate(times.mod(4) - 1)
 }
 
+Array.prototype.flip = function () {
+  return this.map(row => row.slice().reverse())
+}
+
 Array.prototype.count = function (value) {
   return this.filter(item => item === value).length
 }
